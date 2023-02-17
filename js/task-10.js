@@ -21,7 +21,7 @@ function getRandomHexColor() {
 function createBoxes(amount, divToPush) {
   for (let i = 0; i < amount; i += 1) {
     divToPush.insertAdjacentHTML(
-      "before",
+      "beforeend",
       `<div style = "width: ${30 + 10 * i}px; height: ${
         30 + 10 * i
       }px; background-color: ${getRandomHexColor()}"></div>`
