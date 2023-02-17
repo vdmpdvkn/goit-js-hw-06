@@ -19,7 +19,6 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount, divToPush) {
-  let boxesArr = [];
   for (let i = 0; i < amount; i += 1) {
     divToPush.insertAdjacentHTML(
       "before",
