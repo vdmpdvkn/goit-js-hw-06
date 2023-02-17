@@ -15,10 +15,11 @@ const images = [
 const galleryEl = document.querySelector(".gallery");
 console.log(galleryEl);
 galleryEl.style.cssText = "display: flex; align-items:center; gap:10px;";
-const markup = images.map(
-  (image) =>
-    `<li><img src ="${image.url} alt = "${image.alt}" width = "400px" ></li>`
-);
-console.log(markup);
 
-galleryEl.insertAdjacentHTML("afterbegin", markup);
+galleryEl.insertAdjacentHTML(
+  "afterbegin",
+  images.map(
+    ({ url, alt }) =>
+      `<li><img src = "${url} alt = "${alt}" width = "400px"></li>`
+  )
+);
