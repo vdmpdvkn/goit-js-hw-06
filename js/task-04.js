@@ -1,10 +1,10 @@
-const decrementBtnEl = document.querySelector(
-  'button[data-action="decrement"]'
-);
-const valueEl = document.querySelector("#value");
-const incrementBtnEl = document.querySelector(
-  'button[data-action="increment"]'
-);
+const refs = {
+  decrementBtnEl: document.querySelector('button[data-action="decrement"]'),
+  valueEl: document.querySelector("#value"),
+  incrementBtnEl: document.querySelector('button[data-action="increment"]'),
+};
+const { decrementBtnEl, valueEl, incrementBtnEl } = refs;
+
 let counterValue = 0;
 function increment() {
   counterValue += 1;

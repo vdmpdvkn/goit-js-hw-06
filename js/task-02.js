@@ -9,7 +9,7 @@ const ingredients = [
 
 const ingredientsListEl = document.querySelector("#ingredients");
 
-function createElement(arr) {
+function createListElement(arr) {
   return arr.map((element) => {
     const itemEl = document.createElement("li");
     itemEl.textContent = element;
@@ -17,4 +17,4 @@ function createElement(arr) {
     return itemEl;
   });
 }
-ingredientsListEl.prepend(...createElement(ingredients));
+ingredientsListEl.prepend(...createListElement(ingredients));
