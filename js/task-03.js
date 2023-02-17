@@ -21,5 +21,5 @@ galleryEl.insertAdjacentHTML(
   images.map(
     ({ url, alt }) =>
       `<li><img src = "${url} alt = "${alt}" width = "400px"></li>`
-  )
+  ) // почему insertAdjacentHTML принимает массив 0_0
 );
