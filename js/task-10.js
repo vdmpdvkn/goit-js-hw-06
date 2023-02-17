@@ -21,14 +21,11 @@ function getRandomHexColor() {
 function createBoxes(amount, divToPush) {
   let boxesArr = [];
   for (let i = 0; i < amount; i += 1) {
-    const box = document.createElement("div");
-    // box.textContent = i;
-
-    box.style.cssText = `
-    width: ${30 + 10 * i}px; 
-    height: ${30 + 10 * i}px; 
-    background-color: ${getRandomHexColor()}; `;
-    boxesArr.push(box);
+    divToPush.insertAdjacentHTML(
+      "before",
+      `<div style = "width: ${30 + 10 * i}px; height: ${
+        30 + 10 * i
+      }px; background-color: ${getRandomHexColor()}"></div>`
+    );
   }
-  divToPush.prepend(...boxesArr);
 }
