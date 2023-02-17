@@ -13,13 +13,17 @@ const images = [
   },
 ];
 const galleryEl = document.querySelector(".gallery");
+const buttonPrettierEl = document.querySelector(".js-prettier-style");
 console.log(galleryEl);
-galleryEl.style.cssText = "display: flex; align-items:center; gap:10px;";
 
+galleryEl.style.cssText =
+  "display: flex; align-items:center; gap:10px; list-style:none; ";
 galleryEl.insertAdjacentHTML(
   "afterbegin",
-  images.map(
-    ({ url, alt }) =>
-      `<li><img src = "${url} alt = "${alt}" width = "400px"></li>`
-  ) // почему insertAdjacentHTML принимает массив 0_0
+  images
+    .map(
+      ({ url, alt }) =>
+        `<li><img src = "${url}" alt = "${alt}" width = "400px"></li>`
+    )
+    .join("")
 );
