@@ -7,12 +7,14 @@ loginFormEl.addEventListener("submit", (e) => {
   const {
     elements: { email, password },
   } = e.currentTarget; // не понял зачем в примере из конспекта использовался elements: {e, p}, выполнил обычную деструктуризацию, работает точно также. Если это ошибка, или плохой тон, напишите пожалуйста какую роль играет elements в этом случае :)
-  if (email.value.trim() === "" || password.value.trim() === "") {
+  const trimmedEmail = email.value.trim();
+  const trimmedPassword = password.value.trim();
+  if (trimmedEmail === "" || trimmedPassword === "") {
     alert("Введите валидные данные");
   } else {
     const infoObj = {
-      email: email.value,
-      password: password.value,
+      email: trimmedEmail,
+      password: trimmedPassword,
     };
     console.log(infoObj);
   }
