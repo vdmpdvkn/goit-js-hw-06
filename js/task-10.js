@@ -5,9 +5,11 @@ const refs = {
   boxesRef: document.querySelector("#boxes"),
 };
 const { inputRef, buttonCreateRef, buttonDestroyRef, boxesRef } = refs;
+
 buttonCreateRef.addEventListener("click", (e) => {
   e.preventDefault();
-  buttonCreateRef.addEventListener("click", (e) => {});
+
+  createBoxes(inputRef.value, boxesRef);
   inputRef.value = "";
 });
 buttonDestroyRef.addEventListener("click", () => {
